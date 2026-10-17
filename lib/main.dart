@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:rest_api_practice/provider/api_provider.dart';
+import 'package:rest_api_practice/provider/auth_provider.dart';
+import 'package:rest_api_practice/screens/auth/login.dart';
 import 'package:rest_api_practice/screens/home_screen.dart';
 
 void main(){
@@ -15,10 +17,11 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (context) => ApiProvider(),),
+        ChangeNotifierProvider(create: (context) => AuthProvider(),)
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-         home: HomeScreen(),
+         home: LoginScreen(),
       ),
     );
   }

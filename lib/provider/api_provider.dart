@@ -38,6 +38,7 @@ class ApiProvider extends ChangeNotifier {
     }
   }
 
+
   Future<void> postData(ApiModel model) async {
     try {
       isLoading = true;
@@ -82,6 +83,7 @@ class ApiProvider extends ChangeNotifier {
     } catch (e) {
       errorMessage = e.toString();
     } finally {
+
       isLoading = false;
       notifyListeners();
     }
