@@ -3,7 +3,6 @@ import 'package:provider/provider.dart';
 import 'package:rest_api_practice/provider/api_provider.dart';
 import 'package:rest_api_practice/provider/auth_provider.dart';
 import 'package:rest_api_practice/screens/auth/login.dart';
-import 'package:rest_api_practice/screens/home_screen.dart';
 
 void main(){
   runApp(MyApp());

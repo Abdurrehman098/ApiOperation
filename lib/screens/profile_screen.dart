@@ -75,6 +75,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   "Password: ${user.password}",
                   style: const TextStyle(fontSize: 20),
                 ),
+                
+
               ],
             ),
           ),

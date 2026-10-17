@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:rest_api_practice/Api_services/userApi.dart';
 import 'package:rest_api_practice/model/user_model.dart';
+import 'package:rest_api_practice/screens/home_screen.dart';
 import 'package:rest_api_practice/screens/profile_screen.dart';
 
 class AuthProvider extends ChangeNotifier{
@@ -45,8 +46,11 @@ class AuthProvider extends ChangeNotifier{
    if(!context.mounted){
      return;
    }
-     Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) =>ProfileScreen(token : user.accessToken!) ,), (value)=> false
-     );
+     Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) =>HomeScreen() ,), (value)=> false);
+
+      // Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) =>ProfileScreen(token : user.accessToken!) ,), (value)=> false
+      // );
+
     }
     catch(e){
       throw Exception(e.toString());
